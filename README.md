@@ -8,11 +8,11 @@
 - **Views** 展示视图和控件，通常是 `UIView` 的子类
 - **Controllers** 协调 `Model` 和 `View`，通常是 `UIViewController` 的子类
 
-## Delegation
+## Delegation委托
 
 ![delegation](Images/delegation.png)
 
-- **一个对象需要一个代理**，即一个对象有一个代理，为避免引用循环，代理通常是一个弱引用
+- 一个**委托者**，即一个对象有一个委托者来，为避免引用循环，委托者通常是一个弱引用
 - 一个 **协议**，定义了可能需要实现的方法
 - 一个 **代理**，是一个实现了代理协议的委托对象
 
@@ -60,7 +60,7 @@ class B: ADelegate {
 }
 ```
 
-## Strategy
+## Strategy策略
 
 ![strategy](Images/strategy.png)
 
