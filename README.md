@@ -77,3 +77,23 @@ class B: ADelegate {
 > **注意：**
 >
 > 同样不要滥用策略，比如在一个行为不会改变的情况下则不适用
+
+## Singleton单例
+
+![singleton](Images/singleton.png)
+
+单例即一个类只有一个实例
+
+> **注意：**
+>
+> 单例非常容易被滥用，如果你遇到需要使用单例的情况，首先考虑是否有别的方法
+
+```swift
+class AppSettings {
+  static let shared = AppSettings()
+  private init() { }
+}
+
+let appSettings = AppSettings.shared
+```
+

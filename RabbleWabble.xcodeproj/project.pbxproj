@@ -10,6 +10,8 @@
 		D334B0F222CD059600EEB0B2 /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334B0F122CD059600EEB0B2 /* QuestionStrategy.swift */; };
 		D334B0F422CD061700EEB0B2 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334B0F322CD061700EEB0B2 /* SequentialQuestionStrategy.swift */; };
 		D334B0F622CD06DA00EEB0B2 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334B0F522CD06DA00EEB0B2 /* RandomQuestionStrategy.swift */; };
+		D370D05F22D5DF1F00B49EAD /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370D05E22D5DF1F00B49EAD /* AppSettings.swift */; };
+		D370D06122D5E23C00B49EAD /* AppSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370D06022D5E23C00B49EAD /* AppSettingsTableViewController.swift */; };
 		D374D64222CA107A00ACFF81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374D64122CA107A00ACFF81 /* AppDelegate.swift */; };
 		D374D64422CA107A00ACFF81 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D374D64322CA107A00ACFF81 /* QuestionViewController.swift */; };
 		D374D64722CA107A00ACFF81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D374D64522CA107A00ACFF81 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		D334B0F122CD059600EEB0B2 /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
 		D334B0F322CD061700EEB0B2 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
 		D334B0F522CD06DA00EEB0B2 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
+		D370D05E22D5DF1F00B49EAD /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		D370D06022D5E23C00B49EAD /* AppSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsTableViewController.swift; sourceTree = "<group>"; };
 		D374D63E22CA107A00ACFF81 /* RabbleWabble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D374D64122CA107A00ACFF81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D374D64322CA107A00ACFF81 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				D374D64322CA107A00ACFF81 /* QuestionViewController.swift */,
 				D3B98BD322CBA057007EE416 /* SelectQuestionGroupViewController.swift */,
+				D370D06022D5E23C00B49EAD /* AppSettingsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				D374D65822CA116D00ACFF81 /* Question.swift */,
 				D374D65A22CA119700ACFF81 /* QuestionGroup.swift */,
 				D374D65C22CA11E400ACFF81 /* QuestionGroupData.swift */,
+				D370D05E22D5DF1F00B49EAD /* AppSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			files = (
 				D334B0F422CD061700EEB0B2 /* SequentialQuestionStrategy.swift in Sources */,
 				D374D65922CA116D00ACFF81 /* Question.swift in Sources */,
+				D370D05F22D5DF1F00B49EAD /* AppSettings.swift in Sources */,
 				D374D64422CA107A00ACFF81 /* QuestionViewController.swift in Sources */,
 				D334B0F622CD06DA00EEB0B2 /* RandomQuestionStrategy.swift in Sources */,
 				D374D64222CA107A00ACFF81 /* AppDelegate.swift in Sources */,
@@ -221,6 +228,7 @@
 				D3B98BD622CBA158007EE416 /* QuestionGroupTableViewCell.swift in Sources */,
 				D334B0F222CD059600EEB0B2 /* QuestionStrategy.swift in Sources */,
 				D3B98BD422CBA057007EE416 /* SelectQuestionGroupViewController.swift in Sources */,
+				D370D06122D5E23C00B49EAD /* AppSettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
