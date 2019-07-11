@@ -97,3 +97,14 @@ class AppSettings {
 let appSettings = AppSettings.shared
 ```
 
+## Memonto备忘录
+
+![memento](Images/memento.png)
+
+- **原发器**，是需要被保存或恢复的对象
+- **备忘录**，代表一个存储状态
+- **看管人**，从原发器请求保存，得到一个备忘录。看管人持久化存储备忘录，然后再提供给原发器用来恢复状态。
+
+> 使用场合：
+>
+> 适用于存储对象状态且可以后续恢复的场合

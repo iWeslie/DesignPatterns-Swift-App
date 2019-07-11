@@ -18,8 +18,31 @@ public class SelectQuestionGroupViewController: UIViewController {
     }
     
     // MARK:- Properties
-    public let questionGroups = QuestionGroup.allGroups()
-    private var selectdQuestionGroup: QuestionGroup!
+//    public let questionGroups = QuestionGroup.allGroups()
+    
+    private let questionGroupCaretaker = QuestionGroupCaretaker()
+    private var questionGroups: [QuestionGroup] {
+        return questionGroupCaretaker.questionGroups
+    }
+    
+//    private var selectdQuestionGroup: QuestionGroup!
+    private var selectdQuestionGroup: QuestionGroup! {
+        get {
+            return questionGroupCaretaker.selectionQuestionGroup
+        }
+        set {
+            questionGroupCaretaker.selectionQuestionGroup = newValue
+        }
+    }
+    
+    // MARK:- Life Cycle
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        questionGroups.forEach {
+            print("\($0.title), correctCount: \($0.score.correctCount), incorrectCount: \($0.score.incorrectCount)")
+        }
+    }
 
 }
 
@@ -50,7 +73,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
     
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController = segue.destination as? QuestionViewController else { return }
-        viewController.questionStrategy = SequentialQuestionStrategy(questionGroup: selectdQuestionGroup)
+        viewController.questionStrategy = SequentialQuestionStrategy(questionGroupCaretaker: questionGroupCaretaker)
         viewController.delegate = self
     }
 }
