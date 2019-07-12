@@ -108,3 +108,27 @@ let appSettings = AppSettings.shared
 > 使用场合：
 >
 > 适用于存储对象状态且可以后续恢复的场合
+
+## Observer观察者
+
+- **Subject**，是被观察的对象
+- **Observer**，即观察者
+
+> 使用场合：
+>
+> 适用于当你需要接收别的对象改变的时候
+
+```swift
+// KVO
+@objcMembers public class KVOUser: NSObject {
+  dynamic var name: String
+  public init(name: String) {
+    self.name = name
+  }
+}
+
+let user = KVOUser(name: "Weslie")
+var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial, .new]) { (user, change) in 
+	print("User's name is \(user.name)")                                                                                         }
+```
+
