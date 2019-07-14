@@ -8,14 +8,8 @@
 
 public class QuestionGroup: Codable {
     public let questions: [Question]
-    public var score: Score
+    public private(set) var score: Score
     public let title: String
-    
-    public var correctCount: Int = 0 {
-        didSet {
-            
-        }
-    }
     
     public init(questions: [Question], score: Score = Score(), title: String) {
         self.questions = questions

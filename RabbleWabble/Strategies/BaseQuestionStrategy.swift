@@ -29,7 +29,8 @@ public class BaseQuestionStrategy: QuestionStrategy {
     public init(questionCaretaker: QuestionGroupCaretaker, questions: [Question]) {
         self.questionGroupCaretaker = questionCaretaker
         self.questions = questions
-        self.questionGroupCaretaker.selectionQuestionGroup.score = QuestionGroup.Score()
+//        self.questionGroupCaretaker.selectionQuestionGroup.score = QuestionGroup.Score()
+        self.questionGroupCaretaker.selectionQuestionGroup.score.reset()
     }
     
     // MARK:- QuestionStrategy

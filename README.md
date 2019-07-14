@@ -116,7 +116,7 @@ let appSettings = AppSettings.shared
 
 > 使用场合：
 >
-> 适用于当你需要接收别的对象改变的时候
+> 适用于当你需要接收别的对象改变的场合
 
 ```swift
 // KVO
@@ -131,4 +131,18 @@ let user = KVOUser(name: "Weslie")
 var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial, .new]) { (user, change) in 
 	print("User's name is \(user.name)")                                                                                         }
 ```
+
+## Builder建造者
+
+![builder](Images/builder.png)
+
+- **指挥者**接受建造者的输入和坐标，通常是一个 `ViewController` 或者辅助 `class`
+- **产品**就是建造出来的复杂对象，通常是一个模型
+- **建造者**接受一步步的输入来建造产品
+
+> 使用场合：
+>
+> 适用于你想一步步来创建复杂的对象的场合，尤其是一个产品需要多个输入
+>
+> 反之，在你的产品不需要多个输入或者一步步创建的时候则不适用，这种情况就可以考虑便利初始化
 
