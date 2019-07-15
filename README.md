@@ -146,3 +146,11 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 反之，在你的产品不需要多个输入或者一步步创建的时候则不适用，这种情况就可以考虑便利初始化
 
+## MVVM
+
+![mvvm](Images/mvvm.png)
+
+- **Models** 持有数据
+- **Views** 展示视图和控件，通常是 `UIView` 的子类
+- **Controllers** 协调 `Model` 和 `View`，通常是 `UIViewController` 的子类
+- **ViewModel**把 `Model` 信息转换成 `View` 可以显示的值
