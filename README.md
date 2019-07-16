@@ -154,3 +154,15 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 - **Views** 展示视图和控件，通常是 `UIView` 的子类
 - **Controllers** 协调 `Model` 和 `View`，通常是 `UIViewController` 的子类
 - **ViewModel**把 `Model` 信息转换成 `View` 可以显示的值
+
+## Factory工厂
+
+![factory](Images/factory.png)
+
+- **工厂**生产**产品**
+
+> 使用场合：
+>
+> 适用于你想把创建对象的逻辑分离出来，而不是直接创建的场合
+>
+> 尤其是当你有一系列有关联的产品，比如多态的子类或者遵循相同协议的一系列对象的时候
