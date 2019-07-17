@@ -34,7 +34,7 @@ public class ViewController: UIViewController {
     // MARK: - Properties
     public let annotationFactory = AnnotationFactory()
     
-    private var businesses: [YLPBusiness] = []
+    private var businesses: [Business] = []
     private let client = YLPClient(apiKey: YelpAPIKey)
     private let locationManager = CLLocationManager()
     
@@ -84,21 +84,18 @@ extension ViewController: MKMapViewDelegate {
         let yelpCoordinate = YLPCoordinate(latitude: coordinate.latitude,
                                            longitude: coordinate.longitude)
         
-        client.search(with: yelpCoordinate,
-                      term: "coffee",
-                      limit: 35,
-                      offset: 0,
-                      sort: .bestMatched) { [weak self] (searchResult, error) in
-                        guard let self = self else { return }
-                        guard let searchResult = searchResult,
-                            error == nil else {
-                                print("Search failed: \(String(describing: error))")
-                                return
-                        }
-                        self.businesses = searchResult.businesses
-                        DispatchQueue.main.async {
-                            self.addAnnotations()
-                        }
+        client.search(with: yelpCoordinate, term: "coffee", limit: 35, offset: 0, sort: .bestMatched) {
+            [weak self] (searchResult, error) in
+            guard let self = self else { return }
+            guard let searchResult = searchResult?.adaptSearchResultFromYLP(),
+                error == nil else {
+                    print("Search failed: \(String(describing: error))")
+                    return
+            }
+            self.businesses = searchResult.businesses
+            DispatchQueue.main.async {
+                self.addAnnotations()
+            }
         }
     }
     

@@ -166,3 +166,15 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 > 适用于你想把创建对象的逻辑分离出来，而不是直接创建的场合
 >
 > 尤其是当你有一系列有关联的产品，比如多态的子类或者遵循相同协议的一系列对象的时候
+
+## Adapter适配器
+
+![adapter](Images/adapter.png)
+
+- 使用适配器的对象实现新协议，只关心协议返回的数据本身，无需关心被适配者
+- **适配器**遵循新协议，持有被适配者对象（Legacy Object）
+- **被适配者**（Legacy Object）无法直接被修改来遵循新协议
+
+> 使用场合：
+>
+> 适用于在类、模块、函数可能无法被修改的情况，尤其是第三方库，有时你需要对它们进行适配
