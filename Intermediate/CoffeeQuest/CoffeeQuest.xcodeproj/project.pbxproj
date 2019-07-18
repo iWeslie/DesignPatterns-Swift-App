@@ -15,6 +15,7 @@
 		C359338F2023BF5700D85500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C359338D2023BF5700D85500 /* LaunchScreen.storyboard */; };
 		C35933972023D71C00D85500 /* BusinessMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35933962023D71C00D85500 /* BusinessMapViewModel.swift */; };
 		C38756A0E9013F2F1E6253E0 /* Pods_CoffeeQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C9278042C96775D875EE9F /* Pods_CoffeeQuest.framework */; };
+		D300A4F022E081B800F329FA /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D300A4EF22E081B800F329FA /* Filter.swift */; };
 		D360741222DECEBF00A03F9F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D360741122DECEBF00A03F9F /* Protocols.swift */; };
 		D39C608C22DD7442000BCF66 /* AnnotationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39C608B22DD7442000BCF66 /* AnnotationFactory.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		C35933902023BF5700D85500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35933962023D71C00D85500 /* BusinessMapViewModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = BusinessMapViewModel.swift; sourceTree = "<group>"; tabWidth = 4; };
 		C7C9278042C96775D875EE9F /* Pods_CoffeeQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeQuest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D300A4EF22E081B800F329FA /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		D360741122DECEBF00A03F9F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D39C608B22DD7442000BCF66 /* AnnotationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 			children = (
 				C35933962023D71C00D85500 /* BusinessMapViewModel.swift */,
 				D360741122DECEBF00A03F9F /* Protocols.swift */,
+				D300A4EF22E081B800F329FA /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D300A4F022E081B800F329FA /* Filter.swift in Sources */,
 				C35933972023D71C00D85500 /* BusinessMapViewModel.swift in Sources */,
 				4252EAAA2023E05900847430 /* APIKeys.swift in Sources */,
 				D39C608C22DD7442000BCF66 /* AnnotationFactory.swift in Sources */,

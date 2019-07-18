@@ -1,6 +1,8 @@
 # DesignPatterns-Swift-App
 
-## MVC
+## 初级
+
+### MVC
 
 ![mvc](Images/mvc.png)
 
@@ -8,7 +10,7 @@
 - **Views** 展示视图和控件，通常是 `UIView` 的子类
 - **Controllers** 协调 `Model` 和 `View`，通常是 `UIViewController` 的子类
 
-## Delegation委托
+### Delegation委托
 
 ![delegation](Images/delegation.png)
 
@@ -60,7 +62,7 @@ class B: ADelegate {
 }
 ```
 
-## Strategy策略
+### Strategy策略
 
 ![strategy](Images/strategy.png)
 
@@ -146,6 +148,8 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 反之，在你的产品不需要多个输入或者一步步创建的时候则不适用，这种情况就可以考虑便利初始化
 
+## 中级
+
 ## MVVM
 
 ![mvvm](Images/mvvm.png)
@@ -178,3 +182,15 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 > 使用场合：
 >
 > 适用于在类、模块、函数可能无法被修改的情况，尤其是第三方库，有时你需要对它们进行适配
+
+## Iterator迭代器
+
+![iterator](Images/iterator.png)
+
+- Swift 的 `IterableProtocol` 定义了可以在 `for in` 循环中进行迭代的一个类型
+- 通过遵循 `Sequence` 协议，你可以使用**自定义对象**来进行迭代，同时还能使用 `map` ，`filter` 等等高阶函数
+- 不需要直接遵循 `IteratorProtocol` 协议
+
+> 使用场合：
+>
+> 适用于当你有一个持有了很多有序对象的类或者结构体的场合，并且你希望用 for in 循环来遍历它
