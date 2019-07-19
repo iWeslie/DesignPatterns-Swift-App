@@ -194,3 +194,17 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 > 使用场合：
 >
 > 适用于当你有一个持有了很多有序对象的类或者结构体的场合，并且你希望用 for in 循环来遍历它
+
+## Prototype原型
+
+![prototype](Images/prototype.png)
+
+- 一个**复制**协议声明复制的方法
+- **原型**类遵循复制协议
+
+通常有两种不同类型的复制：浅复制和深复制
+
+> 使用场合：
+>
+> 适用于需要对自身进行复制的对象
+

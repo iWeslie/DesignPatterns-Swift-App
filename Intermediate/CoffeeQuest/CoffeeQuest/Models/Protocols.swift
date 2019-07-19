@@ -30,7 +30,7 @@ public struct Business {
 }
 
 extension YLPLocation {
-    func getCoordinBusinessLP() -> CLLocationCoordinate2D {
+    func getCoordinateFromYLP() -> CLLocationCoordinate2D {
         let coordinate = CLLocationCoordinate2D(latitude: self.coordinate!.latitude, longitude: self.coordinate!.longitude)
         return coordinate
     }
