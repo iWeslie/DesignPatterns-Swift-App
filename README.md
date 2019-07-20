@@ -80,7 +80,7 @@ class B: ADelegate {
 >
 > 同样不要滥用策略，比如在一个行为不会改变的情况下则不适用
 
-## Singleton单例
+### Singleton单例
 
 ![singleton](Images/singleton.png)
 
@@ -99,7 +99,7 @@ class AppSettings {
 let appSettings = AppSettings.shared
 ```
 
-## Memonto备忘录
+### Memonto备忘录
 
 ![memento](Images/memento.png)
 
@@ -111,7 +111,7 @@ let appSettings = AppSettings.shared
 >
 > 适用于存储对象状态且可以后续恢复的场合
 
-## Observer观察者
+### Observer观察者
 
 - **Subject**，是被观察的对象
 - **Observer**，即观察者
@@ -134,7 +134,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 	print("User's name is \(user.name)")                                                                                         }
 ```
 
-## Builder建造者
+### Builder建造者
 
 ![builder](Images/builder.png)
 
@@ -150,7 +150,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 
 ## 中级
 
-## MVVM
+### MVVM
 
 ![mvvm](Images/mvvm.png)
 
@@ -159,7 +159,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 - **Controllers** 协调 `Model` 和 `View`，通常是 `UIViewController` 的子类
 - **ViewModel**把 `Model` 信息转换成 `View` 可以显示的值
 
-## Factory工厂
+### Factory工厂
 
 ![factory](Images/factory.png)
 
@@ -171,7 +171,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 尤其是当你有一系列有关联的产品，比如多态的子类或者遵循相同协议的一系列对象的时候
 
-## Adapter适配器
+### Adapter适配器
 
 ![adapter](Images/adapter.png)
 
@@ -183,7 +183,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 适用于在类、模块、函数可能无法被修改的情况，尤其是第三方库，有时你需要对它们进行适配
 
-## Iterator迭代器
+### Iterator迭代器
 
 ![iterator](Images/iterator.png)
 
@@ -195,7 +195,7 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 适用于当你有一个持有了很多有序对象的类或者结构体的场合，并且你希望用 for in 循环来遍历它
 
-## Prototype原型
+### Prototype原型
 
 ![prototype](Images/prototype.png)
 
@@ -208,3 +208,14 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 >
 > 适用于需要对自身进行复制的对象
 
+### State状态
+
+![state](Images/state.png)
+
+- **上下文**是一个定义当前状态并可改变内部行为的对象
+- **状态协议**定义了所需方法以及属性，一般情况下用一个**基础状态类**代替协议，这样可以在其中定义存储属性。由于 Swift 没有抽象类这一说法，所以该基础状态类（抽象状态）不直接进行实例化，而是由其他子类（具体状态）继承
+- **具体状态**继承抽象状态。因为上下文并不知道具体状态类型，所以它通过多态来改变行为，具体状态则定义了它如何进行改变
+
+> 使用场合：
+>
+> 适用于创建一个拥有两个或以上状态并且会在其生命周期内改变的系统
