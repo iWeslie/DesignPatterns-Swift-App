@@ -14,6 +14,7 @@
 		42F35C3B20449C9A00584FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3920449C9A00584FAD /* Main.storyboard */; };
 		42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3C20449C9A00584FAD /* Assets.xcassets */; };
 		42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */; };
+		D35BC1D022E98C3000E8A3CC /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BC1CF22E98C3000E8A3CC /* MulticastDelegate.swift */; };
 		D386C2CB22E210E100595706 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386C2CA22E210E100595706 /* Copying.swift */; };
 		D3B0EA0222E87DB5009F8E80 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B0EA0122E87DB5009F8E80 /* AcceptInputState.swift */; };
 		D3B0EA0422E87DBC009F8E80 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B0EA0322E87DBC009F8E80 /* AnimateState.swift */; };
@@ -32,6 +33,7 @@
 		42F35C3C20449C9A00584FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F35C3F20449C9A00584FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F35C4120449C9A00584FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35BC1CF22E98C3000E8A3CC /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		D386C2CA22E210E100595706 /* Copying.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; tabWidth = 4; };
 		D3B0EA0122E87DB5009F8E80 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
 		D3B0EA0322E87DBC009F8E80 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D386C2CA22E210E100595706 /* Copying.swift */,
+				D35BC1CF22E98C3000E8A3CC /* MulticastDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				D3B0EA0622E87DC9009F8E80 /* ClearState.swift in Sources */,
 				D386C2CB22E210E100595706 /* Copying.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
+				D35BC1D022E98C3000E8A3CC /* MulticastDelegate.swift in Sources */,
 				D3B0EA0222E87DB5009F8E80 /* AcceptInputState.swift in Sources */,
 				424387E420449D300056B653 /* DrawView.swift in Sources */,
 			);

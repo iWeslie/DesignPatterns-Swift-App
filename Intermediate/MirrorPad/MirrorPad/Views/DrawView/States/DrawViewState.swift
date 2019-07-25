@@ -38,3 +38,13 @@ public class DrawViewState {
         return state
     }
 }
+
+extension DrawViewState: DrawViewDelegate {
+    public func drawView(_ source: DrawView, didAddPoint line: CGPoint) {
+        
+    }
+    
+    public func drawView(_ source: DrawView, didAddLine point: LineShape) {
+        
+    }
+}
