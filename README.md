@@ -233,3 +233,14 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 > 使用场合：
 >
 > 适用于创建一对多的代理关系
+
+### Facade外观
+
+![facade](Images/facade.png)
+
+- **外观**提供与系统交互的简单接口，使用者只需使用外观，而不必关心系统的内部
+- **依赖**即外观所持有的对象，每个依赖都执行复杂任务的其中一小部分
+
+> 使用场合：
+>
+> 适用于有多个组件依赖的系统，同时你想给使用者提供简单的接口，这些接口对应会执行复杂的任务
