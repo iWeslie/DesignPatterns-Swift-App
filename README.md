@@ -244,3 +244,15 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 > 使用场合：
 >
 > 适用于有多个组件依赖的系统，同时你想给使用者提供简单的接口，这些接口对应会执行复杂的任务
+
+## 高级
+
+### Flyweight享元
+
+![flyweight](Images/flyweight.png)
+
+享元模式提供了共享数据的对象来节约内存
+
+> 使用场合：
+>
+> 适用于单例且需要多个有不同配置信息的共享实例
