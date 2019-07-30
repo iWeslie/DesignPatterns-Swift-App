@@ -249,10 +249,25 @@ var observer: NSNSKeyValueObservation? = user.observe(\.name, options: [.initial
 
 ### Flyweight享元
 
-![flyweight](Images/flyweight.png)
-
 享元模式提供了共享数据的对象来节约内存
+
+![flyweight](Images/flyweight.png)
 
 > 使用场合：
 >
 > 适用于单例且需要多个有不同配置信息的共享实例
+
+### Mediator中介者
+
+中介者是一个行为模式，封装了一组有相互通信的对象，可以改变程序运行行为
+
+![mediator](Images/mediator.png)
+
+- **Colleague**是一组有相互通信的对象，它们实现了Colleague协议
+- **Colleague Protocol**定义了每一个Colleague必须实现的方法和属性
+- **Mediator**（中介者）是控制Colleague之间通信的对象，它实现了Mediator协议
+- **Mediator Protocol**定义了Mediator必须实现的方法和属性
+
+> 使用场合：
+>
+> 适用于给一组相互间有通信的对象解耦，封装中介者对象，可以独立改变它们之间的交互
